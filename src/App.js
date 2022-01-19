@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import logo from './logo Ucheff.svg';
 import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as router, Switch, route} from 'react-router-dom';
+import NavBar from './componentes/NavBar/NavBar';
+import Header from './componentes/Pages/Header';
+import Ucheff from './componentes/Pages/Ucheff';
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header"> <section>
+        <h1>Hola Ucheff</h1>
+        <hr/>
+        <h3>Gusto y rapidez</h3>
+      </section>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Delivery siempre cerca!!!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      
       </header>
+      <NavBar/>
+      <ItemListContainer greeting="Hola Ucheffers"/>
+      <Header/>
+      <Ucheff/>
+
+
     </div>
   );
 }
