@@ -22,7 +22,7 @@ function App() {
       
       </header>
       <NavBar/>
-      <ItemListContainer greeting="Hola Ucheffers"/>
+      <ItemListContainer />
       <Header/>
       <Ucheff/>
 
