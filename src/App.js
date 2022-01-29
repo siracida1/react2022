@@ -6,6 +6,7 @@ import NavBar from './componentes/NavBar/NavBar';
 import Header from './componentes/Pages/Header';
 import Ucheff from './componentes/Pages/Ucheff';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
+import { ItemCount } from './componentes/ItemCount';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       
       </header>
       <NavBar/>
+      <ItemCount max={5} min={1}/>
       <ItemListContainer />
       <Header/>
       <Ucheff/>

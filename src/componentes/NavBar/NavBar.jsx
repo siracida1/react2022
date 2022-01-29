@@ -6,20 +6,18 @@ export default function NavBar(){
 
     return (
           <>
-        <div className=""> 
-        <ul className="nav justify-content-end">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Cocineros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Trabaja con nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Registrate</a>
-                    </li>                    
+        <div style={{display:"flex", justifyContent:"space-around", alignContent:"center", backgroundColor:"Highlight"  }}> 
+        <ul>
+                    
+                        <a href="#">Menu</a><hr />
+                   
+                   
+                        <a href="#">Cocineros</a><hr />
+                    
+                        <a href="#">Trabaja con nosotros</a>
+                    
+                        <p class="nav-link ">Registrate</p>
+                                        
         </ul>
           <CartWidget />
         </div>
