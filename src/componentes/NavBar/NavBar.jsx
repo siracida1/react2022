@@ -1,26 +1,56 @@
 import react from "react";
-import {link} from "react-router-dom";
+import {Link, link} from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget"; 
+import { Form, FormControl, Nav, Container, Button,Navbar, Offcanvas, NavDropdown} from 'react-bootstrap';
 
 export default function NavBar(){
 
     return (
           <>
-        <div style={{display:"flex", justifyContent:"space-around", alignContent:"center", backgroundColor:"Highlight"  }}> 
-        <ul>
-                    
-                        <a href="#">Menu</a><hr />
-                   
-                   
-                        <a href="#">Cocineros</a><hr />
-                    
-                        <a href="#">Trabaja con nosotros</a>
-                    
-                        <p class="nav-link ">Registrate</p>
-                                        
-        </ul>
-          <CartWidget />
-        </div>
+        <Navbar bg="light" expand={false}>
+  <Container fluid>
+    <Navbar.Brand href="#">Bienvenidos A Ucheff</Navbar.Brand>
+    <Navbar.Toggle aria-controls="offcanvasNavbar" />
+    <Navbar.Offcanvas
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+      placement="end"
+    >
+      <Offcanvas.Header closeButton>
+        <Offcanvas.Title id="offcanvasNavbarLabel">UNDERCHEFF</Offcanvas.Title>
+      </Offcanvas.Header>
+      <Offcanvas.Body>
+        <Nav className="justify-content-end flex-grow-1 pe-3">
+          <Nav.Link href="#action1">COMUNDAD UCHEFF</Nav.Link>
+          <Nav.Link href="#action2">PEDIDO</Nav.Link>
+          <NavDropdown title="MENU" id="offcanvasNavbarDropdown">
+            <NavDropdown.Item ><Link to='/categorias/pizza' >PIZZA</Link></NavDropdown.Item>
+            <NavDropdown.Item ><Link to='categorias/empand' >EMPANADA</Link></NavDropdown.Item>
+            <NavDropdown.Item ><Link to='categorias/hamb' >HAMBURGUESA</Link> </NavDropdown.Item>
+            <NavDropdown.Item ><Link to='categorias/milanesa' >MILANESA</Link> </NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action5">
+              SUMATE A LA COMUNIDAD
+            </NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
+        <Form className="d-flex">
+          <FormControl
+            type="search"
+            placeholder="Search"
+            className="me-2"
+            aria-label="Search"
+          />
+          <Button variant="outline-success">BUSCAR POR ZONA</Button>
+        </Form>
+
+        <CartWidget />
+        
+      </Offcanvas.Body>
+    </Navbar.Offcanvas>
+  </Container>
+</Navbar>
+          
           </>
 
     )
