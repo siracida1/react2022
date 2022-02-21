@@ -10,6 +10,13 @@ export const Formulario = () => {
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email usuario </Form.Label>
             <Form.Control type="email" placeholder="Enter email" />
+            <>
+                    <Form.Control size="lg" type="text" placeholder="Large text" />
+                    <br />
+                    <Form.Control type="text" placeholder="Normal text" />
+                    <br />
+                    <Form.Control size="sm" type="text" placeholder="Small text" />
+                    </>
             <Form.Text className="text-muted">
             Nunca compartiremos tu correo electrónico con nadie.
             </Form.Text>

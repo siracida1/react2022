@@ -25,9 +25,11 @@ export default function NavBar(){
           <Nav.Link href="#action2">PEDIDO</Nav.Link>
           <NavDropdown title="MENU" id="offcanvasNavbarDropdown">
             <NavDropdown.Item ><Link to='/categorias/pizza' >PIZZA</Link></NavDropdown.Item>
-            <NavDropdown.Item ><Link to='categorias/empand' >EMPANADA</Link></NavDropdown.Item>
-            <NavDropdown.Item ><Link to='categorias/hamb' >HAMBURGUESA</Link> </NavDropdown.Item>
-            <NavDropdown.Item ><Link to='categorias/milanesa' >MILANESA</Link> </NavDropdown.Item>
+            <NavDropdown.Item ><Link to='/categorias/empanada' >EMPANADA</Link></NavDropdown.Item>
+            <NavDropdown.Item ><Link to='/categorias/hamburguesa' >HAMBURGUESA</Link> </NavDropdown.Item>
+            <NavDropdown.Item ><Link to='/categorias/milanesa' >MILANESA</Link> </NavDropdown.Item>
+            <NavDropdown.Item ><Link to='/categorias/papas' >PAPAS</Link> </NavDropdown.Item>
+            <NavDropdown.Item ><Link to='/categorias/bebidas' >BEBIDA</Link> </NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action5">
               SUMATE A LA COMUNIDAD

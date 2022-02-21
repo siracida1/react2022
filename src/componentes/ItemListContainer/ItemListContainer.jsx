@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from 'react' 
 import ItemList from './ItemList'
-import { productosMenu } from '../../productos/data'
-import { cocineros } from '../../productos/data2'
 import { useParams } from 'react-router-dom'
+import { getFirestore } from '../../firebase/firebase'
 
 const ItemListContainer = () => {                                     //arrow function
     const [productos,setProductos] = useState([])                     // array vacio []
@@ -10,25 +9,34 @@ const ItemListContainer = () => {                                     //arrow fu
     const { catId } = useParams();
 
 
-                                                                                     // const traerProductos = fetch('https://fakestoreapi.com/products/') fech llamada sincronica a la api
-    const traerProductos = new Promise ((response, reject)=> {                    // guardamos la promesa API Promise con la palabra New (response y reject funcioes nativas dentro de promesas)
-          setTimeout (()=>{   
-            if (catId)  {
-                 response (productosMenu.filter(element => element.titulo === catId))
-            }else {
-                 response (productosMenu);
-            }                                                                                                   //setTimeuot funciona nativa de js ()llev los parametros una funcion callback, hacemos arrowfunct
-           },1000 )                                                                                // tiempo de respueta 
-    })                                                                                            // response los productos menu 
-       
-   
+    
     useEffect(() => {
-        traerProductos                                                                          //respuesta de la promesa con then de data
-        .then(data=>{setProductos(data)})                                                   // lo que ponga dentro de llaves lo setea llama
-    }, [] )
+      
+        const db = getFirestore ()
+        let coleccion;
+        if (catId) {
+             coleccion = db.collection('items').where('titulo','==', catId)
+        } else {
+         coleccion = db.collection('items')
+        }
+        coleccion.get()
+        .then(res => {
+            if (res.size === 0){
+                console.log ('No hay resultados')
+            }
+            setProductos(res.docs.map(elemento => {
+
+               return { id: elemento.id, ...elemento.data()}
+            }))
+
+
+        })
+        .catch(error => console.log('Error desde firebase ->', error))
+
+    }, [catId] )
 
     return (
-        <div style={{display:"flex", flexflow:"row wrap", justifyContent: "space-around", alignContent:"center", width: "100%"}}>
+        <div style={{textAlign:"center",}}>
             
             <h2>Menu</h2>
             <br/>

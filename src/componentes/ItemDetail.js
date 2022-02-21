@@ -1,21 +1,20 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { ItemCount } from './ItemCounts/ItemCount';
-
+import CartProvider, { CartContext} from '../context/CartProvider';
 
 export const ItemDetail = ({producto}) => {
 
+    const {agregarAlCarrito} = useContext(CartContext)
 
     const [agrego, setAgrego] = useState(false);
 
-    const onAdd = () => {
+    const onAdd = (cantidad) => {
 
-        const onAdd = (cantidad) => {
             console.log('sumaste productos:'+ cantidad);
-            setAgrego(true);
-      
-        }
-      
+            agregarAlCarrito(producto, cantidad);
+            setAgrego(true);   
+              
     }
 
 
@@ -23,10 +22,7 @@ export const ItemDetail = ({producto}) => {
   <div> 
      <h2>{producto.titulo}</h2>
      <h4>{producto.precio}</h4>
-     <select>
-         {producto.cocineros.map(cocinero=><option value={cocinero.nombre}>{cocinero.nombre} </option>)}
-         
-     </select>
+    
       {agrego?
       <Link to='/carrito'>Pagar pedido</Link>
       :

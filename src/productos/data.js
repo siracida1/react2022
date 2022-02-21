@@ -3,8 +3,6 @@ import imagen from '../img/pizza.jpg';
 import empanad from '../img/empand.jpg';
 import empanad2 from '../img/empanad2.jpg';
 import hamb from '../img/hamb.jpg';
-import juana from '../img/juana.jpg';
-import carl from '../img/carl.jpg';
 import logoUcheff from '../img/logoUcheff.png';
 
 export const productosMenu = [                    //array de productos 
@@ -13,7 +11,6 @@ export const productosMenu = [                    //array de productos
         cocineros: cocineros,
         img: imagen,
         titulo: "pizza",                        //: string estre comillas y ,
-        tamano: "media", 
         tamano: "grande",
         gusto: "muzzarella",
         ingredientes: "muzzarella, salsa de tomate",
@@ -41,8 +38,7 @@ export const productosMenu = [                    //array de productos
         id: '4',
         cocineros: cocineros,
         img: hamb,
-        titulo: "Hamburguesa",
-        tamano: "media", 
+        titulo: "hamburguesa",
         tamano: "grande",
         ingredientes: "hamburguesa cheddar con papas fritas",
         precio: 1500,
@@ -52,8 +48,7 @@ export const productosMenu = [                    //array de productos
         id: '5',
         cocineros: cocineros,
         img: hamb,
-        titulo: "Milanesa",
-        tamano: "media", 
+        titulo: "milanesa",
         tamano: "grande",
         ingredientes: "lomo y papas fritas",
         precio: 1500,
@@ -64,7 +59,6 @@ export const productosMenu = [                    //array de productos
         cocineros: cocineros,
         img: hamb,
         titulo: "papas",
-        tamano: "media", 
         tamano: "grande",
         ingredientes: "fritas / Horno",
         precio: 1500,
