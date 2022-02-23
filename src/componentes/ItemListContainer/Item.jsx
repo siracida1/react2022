@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 
 const Item = ({ prod }) => {
-     console.log (prod);
 
      return (
        <div> <Card style={{ width: '15rem' }}>

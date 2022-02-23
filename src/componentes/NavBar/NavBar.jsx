@@ -9,7 +9,7 @@ export default function NavBar(){
           <>
         <Navbar bg="light" expand={false}>
   <Container fluid>
-    <Navbar.Brand href="#">Bienvenidos A Ucheff</Navbar.Brand>
+    <Navbar.Brand><Link to={'/'}>Bienvenidos A Ucheff</Link></Navbar.Brand>
     <Navbar.Toggle aria-controls="offcanvasNavbar" />
     <Navbar.Offcanvas
       id="offcanvasNavbar"
