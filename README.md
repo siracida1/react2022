@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Proyecto Undercheff
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_App de pedidos de comida de chef amateur cerca de casa y a bajo costo_
 
-## Available Scripts
+## Comenzando 🚀
 
-In the project directory, you can run:
+Este proyecto se inició con [Create React App]
 
-### `npm start`
+_Descargar el archivo comprimido, https://github.com/siracida1/react2022.git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Pre-requisitos 📋
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Descargarlo VSC ultima version
 
-### `npm run build`
+Descargar React 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Instalación 🔧
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Descargar carpeta de https://github.com/siracida1/react2022.git
 
-### `npm run eject`
+Abrir carpeta en VSC
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Abrir terminal
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Ejecutar npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Y las pruebas de estilo de codificación ⌨️
 
-## Learn More
+Falta implementar mercado pago y googlemap para el seguimiento del pedido.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Construido con 🛠️
 
-### Code Splitting
+"bootstrap": "^5.1.3",
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+"firebase": "^8.8.0",
 
-### Analyzing the Bundle Size
+"react-bootstrap": "^2.1.1",
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+"react-router-dom": "^5.2.0",
 
-### Making a Progressive Web App
+## Contribuyendo 🖇️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Por favor lee el [CONTRIBUTING.md](https://github.com/siracida1/react2022.git) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Autores ✒️
 
-### Deployment
+* **MAURICIO OHACO** - *Trabajo Inicial* - [siracida1](https://github.com/siracida1/react2022.git)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Licencia 📄
 
-### `npm run build` fails to minify
+Este proyecto está bajo la Licencia de Mauricio Ohaco-mail-siracida111@hotmail.com - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Expresiones de Gratitud 🎁
+
+A coderhouse, Guille y a Nico que me ayudaron a este primer proyecto, por muchos mas.

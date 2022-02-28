@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react';
+import { Button, Container, Card } from 'react-bootstrap';
 
 export const CartContext = createContext();
 
@@ -48,10 +49,17 @@ const CartProvider = ({children}) => {
 
 
   return (
-  <CartContext.Provider value ={{carrito, agregarAlCarrito, borrarDelcarrito, limpiarCarrito, cantidadTotal, precioTotal }}>
-     {children}
+    <>
+    <div class="row justify-content-center">
+   
+      <CartContext.Provider value ={{carrito, agregarAlCarrito, borrarDelcarrito, limpiarCarrito, cantidadTotal, precioTotal }}>
+        {children}
+          </CartContext.Provider>
+  
 
-  </CartContext.Provider>
+      
+    </div>
+    </>
   )
 };
 

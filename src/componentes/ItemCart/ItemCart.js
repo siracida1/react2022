@@ -15,7 +15,7 @@ const ItemCart = ({producto}) => {
     
    <div>
         <h1>  {producto.item.titulo}    </h1>
-        <Button onClick={borrar}>Borrar del carrito</Button>
+        <Button variant="warning" onClick={borrar}>Borrar del carrito</Button>
   </div>
   
   )

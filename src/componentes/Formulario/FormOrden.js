@@ -2,6 +2,9 @@ import React, { useRef, useContext } from "react";
 import firebase from "firebase/app";
 import { CartContext } from "../../context/CartProvider";
 import { getFirestore } from "../../firebase/firebase";
+import { Button, Container, Form } from 'react-bootstrap';
+
+
 
 export default function FormOrden({ setOrdenCreada }) {
   const { carrito, limpiarCarrito, precioTotal } = useContext(CartContext);
@@ -50,31 +53,30 @@ export default function FormOrden({ setOrdenCreada }) {
   }
 
   return (
-
-    <>
-      <div>
+    <Container>
+       <div class="row justify-content-center" >
         <h3>Ingresa tus datos:</h3>
 
-        <input type="text" name="name" ref={nameRef} placeholder="Nombre y Apellido" required/>
+        <Form.Control   input type="text" name="name" ref={nameRef} placeholder="Nombre y Apellido" required/>
         <br />
 
-        <input type="number" name="mobile" ref={mobileRef} placeholder="Nro de Celular" required/>
+        <Form.Control  input type="number" name="mobile" ref={mobileRef} placeholder="Nro de Celular" required/>
         <br />
 
-        <input type="email" name="email" ref={emailRef} placeholder="Email" required/>
+        <Form.Control input type="email" name="email" ref={emailRef} placeholder="Email" required/>
         <br />
 
-        <input type="text" name="state" ref={stateRef} placeholder="Provincia" required/>
+        <Form.Control input type="text" name="state" ref={stateRef} placeholder="Provincia" required/>
         <br />
 
-        <input type="text" name="city" ref={cityRef} placeholder="Ciudad" required/>
+        <Form.Control input type="text" name="city" ref={cityRef} placeholder="Ciudad" required/>
         <br />
 
-        <input type="text" name="address" ref={addressRef} placeholder="Direccion" required/>
+        <Form.Control input type="text" name="address" ref={addressRef} placeholder="Direccion" required/>
         <br />
 
-        <button onClick={() => terminarCompra()} >Terminar</button>
+        <Button variant="danger" onClick={() => terminarCompra()} >TERMINAR EL PEDIDO</Button>
       </div>
-    </>
+    </Container>
   );
 }

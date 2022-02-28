@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react' 
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
+import { Badge } from 'react-bootstrap'
 import { getFirestore } from '../../firebase/firebase'
 
 const ItemListContainer = () => {                                     //arrow function
@@ -37,9 +38,9 @@ const ItemListContainer = () => {                                     //arrow fu
 
     return (
         <div style={{textAlign:"center",}}>
+             <Badge pill bg="warning" text="dark"><h2>Menu</h2> </Badge>
             
-            <h2>Menu</h2>
-            <br/>
+            <br/> <br/>
             <ItemList productos={productos}/>
 
         </div>

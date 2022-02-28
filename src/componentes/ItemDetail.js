@@ -2,7 +2,8 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { ItemCount } from './ItemCounts/ItemCount';
 import CartProvider, { CartContext } from '../context/CartProvider';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
+import Image from 'react-bootstrap/Image'
 
 export const ItemDetail = ({ producto }) => {
 
@@ -24,7 +25,7 @@ export const ItemDetail = ({ producto }) => {
     <Container>
       <Row>
         <Col>
-          <img src={producto.img} width='400px' alt="imagen producto" />
+          <img src={producto.img} className= "rounded" width='400px' alt="imagen producto" />
         </Col>
         <Col style={{display: 'flex', flexFlow: 'column wrap', justifyContent: 'space-evenly'}}>
           <h2>{producto.titulo}</h2>
@@ -33,7 +34,7 @@ export const ItemDetail = ({ producto }) => {
           <p>Tamaño: {producto.tamano}</p>
 
           {agrego ?
-            <Link to='/carrito'>Pagar pedido</Link>
+           <Button variant="warning"><Link to='/carrito'>PAGAR PEDIDO</Link></Button>
             :
             <ItemCount max={5} min={1} onAdd={onAdd} />
           }

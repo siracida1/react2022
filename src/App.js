@@ -11,6 +11,7 @@ import { ItemCount } from './componentes/ItemCounts/ItemCount';
 import { Formulario } from './componentes/Form/Form';
 import CartProvider from './context/CartProvider';
 import Cart from './componentes/Cart/Cart';
+import FooterPage from './FooterPage/FooterPage';
 
 function App() {
   return (
@@ -79,13 +80,15 @@ function App() {
                   <Formulario/>
 
            </Route>
-
-        </Switch>
-
         
-    
+        </Switch>    
+       
+
+      <FooterPage/>
+
     </BrowserRouter>
     </CartProvider>
+    
   );
 }
 

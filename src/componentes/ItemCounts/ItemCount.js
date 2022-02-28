@@ -26,7 +26,7 @@ export const ItemCount = ({ max, min, onAdd }) => {
       </Col>
       <Col md="auto"><h3>{contador}</h3></Col>
       <Col xs lg="2">
-        <Button variant='danger' onClick={sumar}>+</Button>
+        <Button variant='warning' onClick={sumar}>+</Button>
       </Col>
       <Col>
         <Button variant='success' onClick={() => onAdd(contador)} >Agregar al pedido</Button>
